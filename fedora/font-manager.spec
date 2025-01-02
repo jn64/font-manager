@@ -57,22 +57,10 @@ BuildRequires: pkgconfig(libnemo-extension)
 BuildRequires: pkgconfig(thunarx-3)
 %endif
 
-Requires: fontconfig
 Requires: %{name}-common
 Requires: font-viewer
-Requires: freetype
 Requires: gtk4 >= 4.12
-Requires: sqlite
 Requires: yelp
-
-%if %{with adwaita}
-Requires: libadwaita
-%endif
-
-%if %{with webkit}
-Requires: libsoup3
-Requires: webkitgtk6.0
-%endif
 
 %description
 Font Manager is intended to provide a way for average users to easily
