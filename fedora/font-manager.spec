@@ -22,39 +22,39 @@ Source0:    %{git_archive}
 
 BuildRequires: gettext
 BuildRequires: meson
-BuildRequires: fontconfig-devel >= 2.12
-BuildRequires: freetype-devel >= 2.10
-BuildRequires: glib2-devel >= 2.62
-BuildRequires: gobject-introspection-devel
-BuildRequires: gtk4-devel >= 4.12
-BuildRequires: json-glib-devel >= 1.5
 BuildRequires: libappstream-glib
-BuildRequires: libxml2-devel >= 2.9.10
-BuildRequires: pango-devel >= 1.45
-BuildRequires: sqlite-devel >= 3.35
 BuildRequires: vala >= 0.42
 BuildRequires: yelp-tools
 BuildRequires: desktop-file-utils
+BuildRequires: pkgconfig(fontconfig) >= 2.12
+BuildRequires: pkgconfig(freetype2) >= 2.10
+BuildRequires: pkgconfig(glib-2.0) >= 2.62
+BuildRequires: pkgconfig(gobject-introspection-1.0)
+BuildRequires: pkgconfig(gtk4) >= 4.12
+BuildRequires: pkgconfig(json-glib-1.0) >= 1.5
+BuildRequires: pkgconfig(libxml-2.0) >= 2.9.10
+BuildRequires: pkgconfig(pango) >= 1.45
+BuildRequires: pkgconfig(sqlite3) >= 3.35
 
 %if %{with adwaita}
-BuildRequires: libadwaita-devel
+BuildRequires: pkgconfig(libadwaita-1)
 %endif
 
 %if %{with webkit}
-BuildRequires: libsoup3-devel >= 3.2
-BuildRequires: webkitgtk6.0-devel >= 2.4
+BuildRequires: pkgconfig(libsoup-3.0) >= 3.2
+BuildRequires: pkgconfig(webkitgtk-6.0) >= 2.4
 %endif
 
 %if %{with nautilus}
-BuildRequires: nautilus-devel
+BuildRequires: pkgconfig(libnautilus-extension-4)
 %endif
 
 %if %{with nemo}
-BuildRequires: nemo-devel
+BuildRequires: pkgconfig(libnemo-extension)
 %endif
 
 %if %{with thunar}
-BuildRequires: Thunar-devel
+BuildRequires: pkgconfig(thunarx-3)
 %endif
 
 Requires: fontconfig
